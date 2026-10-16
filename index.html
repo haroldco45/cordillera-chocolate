@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cordillera Chocolate</title>
+<meta name="description" content="Portafolio de ingredientes de chocolate Cordillera para repostería, heladería, pastelería, panadería y bebidas. Pedidos por WhatsApp con Sofía en Caucasia y toda la zona de Distrileco.">
+<meta name="theme-color" content="#0e2a38">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta property="og:title" content="Chocolate Cordillera · Pide con Sofía">
+<meta property="og:description" content="Coberturas, cocoas, chips y toppings Cordillera. Pide por WhatsApp en Caucasia, Bajo Cauca, Córdoba, Nordeste, Urabá y Sucre.">
+<meta property="og:image" content="img/torta.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e2a38;--navy2:#143a4c;--gold:#c9a24e;--gold2:#e2c27f;--cacao:#4a2c1d;
+  --bg:#f6f2ea;--card:#ffffff;--ink:#1d2327;--muted:#5d6a70;--line:#e5ddcf;--wa:#1faa59;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0b1d26;--card:#12303e;--ink:#eef2f3;--muted:#a9b9bf;--line:#24495a}}
+:root[data-theme="dark"]{--bg:#0b1d26;--card:#12303e;--ink:#eef2f3;--muted:#a9b9bf;--line:#24495a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3,.osw{font-family:Oswald,Impact,sans-serif;letter-spacing:.02em;line-height:1.1}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* nav */
+nav.top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:rgba(14,42,56,.88);backdrop-filter:blur(10px);color:#fff}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .c{width:34px;height:34px;border:4px solid var(--gold);border-right-color:transparent;border-radius:50%;transform:rotate(45deg)}
+.brand b{font-family:Oswald;font-size:20px;letter-spacing:.12em}
+.brand small{display:block;font-size:10px;letter-spacing:.2em;color:var(--gold2);margin-top:-3px}
+nav.top .links{display:flex;gap:18px;font-size:14px}
+nav.top .links a{text-decoration:none;opacity:.85}
+nav.top .links a:hover{opacity:1;color:var(--gold2)}
+.cartbtn{position:relative;background:var(--gold);color:var(--navy);border:0;border-radius:999px;padding:9px 16px;font-weight:700;cursor:pointer;font-size:14px}
+.cartbtn i{font-style:normal;background:var(--navy);color:#fff;border-radius:999px;padding:1px 7px;margin-left:6px;font-size:12px}
+@media(max-width:820px){nav.top .links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--navy)}
+.hero .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s;animation:kb 18s ease-in-out infinite alternate}
+.hero .slides img.on{opacity:1}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-2%,-1%)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,42,56,.35) 0%,rgba(14,42,56,.2) 40%,rgba(10,26,34,.92) 100%)}
+.hero .in{position:relative;z-index:2;padding:120px 16px 56px;max-width:1180px;margin:0 auto;width:100%}
+.eyebrow{display:inline-block;color:var(--gold2);font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.hero h1{font-size:clamp(40px,8vw,88px);font-weight:700;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{max-width:600px;font-size:clamp(16px,2.2vw,19px);opacity:.92;margin:16px 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:14px 24px;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;font-family:Inter}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4)}
+.btn.wa{background:var(--wa);color:#fff}
+.uses{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.uses span{border:1px solid rgba(226,194,127,.5);color:var(--gold2);border-radius:999px;padding:5px 12px;font-size:13px}
+
+/* stats */
+.stats{background:var(--navy);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08)}
+.stats div{background:var(--navy);padding:26px 14px;text-align:center}
+.stats b{display:block;font-family:Oswald;font-size:clamp(26px,4vw,40px);color:var(--gold)}
+.stats span{font-size:13px;opacity:.8}
+@media(max-width:640px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+
+section{padding:72px 0}
+.sh{margin-bottom:28px}
+.sh h2{font-size:clamp(30px,5vw,48px);text-transform:uppercase;color:var(--ink)}
+.sh h2 em{font-style:normal;color:var(--gold)}
+.sh p{color:var(--muted);max-width:640px;margin-top:8px}
+
+/* line selector (Toyota-like) */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:22px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:10px 18px;font-weight:600;cursor:pointer;font-size:14px}
+.tab.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.linehead{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-radius:18px;overflow:hidden;background:var(--navy);color:#fff;margin-bottom:22px;min-height:240px}
+.linehead img{width:100%;height:100%;object-fit:cover;min-height:220px}
+.linehead .t{padding:28px}
+.linehead h3{font-size:clamp(26px,4vw,38px);text-transform:uppercase}
+.linehead h3 em{font-style:normal;color:var(--gold)}
+.linehead p{opacity:.88;margin-top:10px}
+@media(max-width:720px){.linehead{grid-template-columns:1fr}.linehead img{max-height:220px}}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(14,42,56,.14)}
+.card .ph{background:#fff;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:14px}
+.card .ph img{max-height:100%;object-fit:contain}
+.card .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);}
+.card h4{font-family:Oswald;font-size:19px;font-weight:600;text-transform:uppercase;line-height:1.15}
+.card p{font-size:13.5px;color:var(--muted)}
+.card .ft{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:8px;font-size:13px;color:var(--muted)}
+.card .ft b{color:var(--navy);background:var(--gold2);border-radius:999px;padding:5px 12px;font-size:12.5px}
+:root[data-theme="dark"] .card .ft b{color:var(--navy)}
+
+/* why */
+.why{background:var(--navy);color:#fff}
+.why .sh h2{color:#fff}
+.why .sh p{color:#c5d3d8}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.wgrid figure{position:relative;border-radius:16px;overflow:hidden;min-height:300px}
+.wgrid figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wgrid figcaption{position:absolute;inset:auto 0 0 0;padding:18px;background:linear-gradient(transparent,rgba(8,22,30,.92))}
+.wgrid figcaption b{display:block;font-family:Oswald;font-size:22px;text-transform:uppercase;color:var(--gold2)}
+.wgrid figcaption span{font-size:14px;opacity:.9}
+@media(max-width:820px){.wgrid{grid-template-columns:1fr}}
+
+/* videos / reel */
+.reel{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.vid{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:9/14;background:#000}
+.vid video,.vid iframe{width:100%;height:100%;object-fit:cover;border:0}
+.vid .story img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s}
+.vid .story img.on{opacity:1;animation:kb 7s linear forwards}
+.vid .cap{position:absolute;inset:auto 0 0 0;padding:16px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.8));z-index:2}
+.vid .cap b{font-family:Oswald;font-size:20px;text-transform:uppercase}
+.vid .bar{position:absolute;top:10px;left:10px;right:10px;display:flex;gap:4px;z-index:3}
+.vid .bar i{flex:1;height:3px;background:rgba(255,255,255,.35);border-radius:3px;overflow:hidden}
+.vid .bar i u{display:block;height:100%;width:0;background:#fff}
+
+/* seller */
+.seller{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center}
+.seller .pic{border-radius:18px;overflow:hidden;aspect-ratio:4/5}
+.seller .pic img{width:100%;height:100%;object-fit:cover}
+.zones{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.zones span{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:14px}
+.zones span b{color:var(--gold)}
+.steps{counter-reset:s;display:grid;gap:12px;margin:18px 0 24px}
+.steps li{list-style:none;display:flex;gap:12px;align-items:flex-start}
+.steps li:before{counter-increment:s;content:counter(s);flex:0 0 32px;height:32px;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:800;display:flex;align-items:center;justify-content:center}
+@media(max-width:820px){.seller{grid-template-columns:1fr}.seller .pic{aspect-ratio:16/10}}
+
+footer{background:#081a23;color:#b9c8ce;padding:36px 0 110px;font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+footer b{color:#fff}
+
+/* modal */
+.ov{position:fixed;inset:0;background:rgba(5,16,22,.6);z-index:80;display:none;align-items:flex-end;justify-content:center}
+.ov.on{display:flex}
+.sheet{background:var(--card);color:var(--ink);width:100%;max-width:760px;max-height:92svh;overflow:auto;border-radius:22px 22px 0 0;padding:20px 18px 26px;animation:up .25s ease}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+@media(min-width:760px){.ov{align-items:center}.sheet{border-radius:22px}}
+.sheet .x{float:right;border:0;background:var(--bg);color:var(--ink);width:36px;height:36px;border-radius:50%;font-size:20px;cursor:pointer}
+.pd{display:grid;grid-template-columns:220px 1fr;gap:20px;clear:both}
+.pd .im{background:#fff;border-radius:14px;padding:12px;display:flex;align-items:center;justify-content:center}
+.pd h3{font-size:28px;text-transform:uppercase;margin:4px 0 8px}
+.pd ul.b{margin:10px 0 0 18px;font-size:14px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chips span{font-size:12px;background:var(--bg);border-radius:999px;padding:4px 10px}
+@media(max-width:600px){.pd{grid-template-columns:1fr}.pd .im{max-height:240px}.pd .im img{max-height:210px}}
+.pres{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.pres h5{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.prow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px}
+.prow small{display:block;color:var(--muted);font-size:12px}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:18px;cursor:pointer}
+.qty b{min-width:22px;text-align:center}
+.field{display:grid;gap:6px;margin-bottom:12px}
+.field label{font-size:13px;font-weight:600}
+.field input,.field select,.field textarea{font:inherit;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.empty{color:var(--muted);text-align:center;padding:24px 0}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px}
+
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:10px;align-items:center}
+.fab a{width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.fab a svg{width:30px;height:30px;fill:#fff}
+.reftag{position:fixed;left:16px;bottom:22px;z-index:60;background:var(--navy);color:var(--gold2);font-size:12px;border-radius:999px;padding:7px 12px;border:1px solid rgba(226,194,127,.4)}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 18px;border-radius:999px;z-index:90;font-size:14px;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.on{opacity:1}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a class="brand" href="#inicio"><span class="c"></span><span><b>CORDILLERA</b><small>DESDE 1920</small></span></a>
+  <div class="links"><a href="#lineas">Productos</a><a href="#videos">Videos</a><a href="#origen">Origen</a><a href="#pedir">Cómo pedir</a></div>
+  <button class="cartbtn" onclick="openCart()">Mi pedido<i id="cc">0</i></button>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="slides" id="slides">
+    <img class="on" src="img/torta.jpg" alt="Torta bañada en chocolate Cordillera">
+    <img src="img/pastelero.jpg" alt="Pastelero bañando un croissant con chocolate">
+    <img src="img/trufas.jpg" alt="Trufas de chocolate">
+    <img src="img/galletas.jpg" alt="Galletas con chips de chocolate">
+    <img src="img/mazorcas.jpg" alt="Mazorcas de cacao">
+  </div>
+  <div class="in">
+    <span class="eyebrow">Portafolio de ingredientes de chocolate</span>
+    <h1>El chocolate de los<br><em>que hornean en serio</em></h1>
+    <p class="lead">Coberturas, cocoas, chips y toppings Cordillera para tu panadería, heladería, pastelería o negocio de postres. Pide por WhatsApp con Sofía y te llega en Caucasia y toda la zona de cubrimiento de Distrileco.</p>
+    <div class="cta">
+      <a class="btn gold" href="#lineas">Ver productos</a>
+      <a class="btn wa" id="heroWa" href="#" target="_blank" rel="noopener">Hablar con Sofía</a>
+    </div>
+    <div class="uses"><span>Repostería</span><span>Heladería</span><span>Pastelería</span><span>Panadería</span><span>Bebidas</span></div>
+  </div>
+</header>
+
+<div class="stats"><div class="wrap">
+  <div><b>1920</b><span>Más de 100 años haciendo chocolate</span></div>
+  <div><b>32</b><span>Productos en el portafolio</span></div>
+  <div><b>8.000</b><span>Paneles solares en la planta</span></div>
+  <div><b>8%</b><span>del cacao fino y de aroma del mundo es latinoamericano</span></div>
+</div></div>
+
+<section id="lineas"><div class="wrap">
+  <div class="sh"><h2>Escoge tu <em>línea</em></h2><p>Toca un producto para ver presentaciones, usos y agregarlo a tu pedido. Sofía te confirma precio y entrega por WhatsApp.</p></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="linehead" id="linehead"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="videos" style="padding-top:0"><div class="wrap">
+  <div class="sh"><h2>Mira el <em>chocolate</em> en acción</h2><p>Lo que puedes hacer con Cordillera en tu negocio.</p></div>
+  <div class="reel" id="reel"></div>
+</div></section>
+
+<section class="why" id="origen"><div class="wrap">
+  <div class="sh"><h2>Cacao <em>latinoamericano</em>, hecho con propósito</h2><p>Cordillera es de la Compañía Nacional de Chocolates. Compra el cacao directo a los agricultores y produce con energía limpia.</p></div>
+  <div class="wgrid">
+    <figure><img src="img/cacaotero.jpg" alt="Cacaotero cosechando" loading="lazy"><figcaption><b>Cadena corta</b><span>Compra directa a asociaciones y cooperativas cacaoteras, con trazabilidad del grano.</span></figcaption></figure>
+    <figure><img src="img/solar.jpg" alt="Paneles solares de la planta" loading="lazy"><figcaption><b>Energías limpias</b><span>Cerca de 8.000 paneles solares, como sembrar 40 hectáreas de bosque agroforestal.</span></figcaption></figure>
+    <figure><img src="img/campesina.jpg" alt="Agricultora en un cultivo de cacao" loading="lazy"><figcaption><b>Granjas y viveros de paz</b><span>Granjas en Yarigüíes (Santander) y Támesis (Antioquia); viveros en Codazzi y San Martín.</span></figcaption></figure>
+  </div>
+</div></section>
+
+<section id="pedir"><div class="wrap seller">
+  <div class="pic"><img src="img/granos.jpg" alt="Cacao, manteca y chocolate" loading="lazy"></div>
+  <div>
+    <span class="eyebrow" style="color:var(--gold)">Tu asesora Cordillera</span>
+    <h2 class="osw" style="font-size:clamp(30px,5vw,46px);text-transform:uppercase">Pide con <span style="color:var(--gold)">Sofía</span></h2>
+    <p style="color:var(--muted);margin-top:8px">Sofía atiende desde Caucasia y despacha en toda la zona que cubre Distrileco.</p>
+    <div class="zones"><span><b>●</b> Bajo Cauca</span><span><b>●</b> Córdoba</span><span><b>●</b> Nordeste antioqueño</span><span><b>●</b> Urabá</span><span><b>●</b> Sucre</span></div>
+    <ol class="steps">
+      <li>Escoge productos y presentaciones en esta app.</li>
+      <li>Pon tu nombre, negocio y municipio.</li>
+      <li>Envía el pedido por WhatsApp. Sofía te confirma precio, disponibilidad y día de entrega.</li>
+    </ol>
+    <div class="cta"><button class="btn gold" onclick="openCart()">Ver mi pedido</button><a class="btn wa" id="sellerWa" href="#" target="_blank" rel="noopener">WhatsApp 312 680 6388</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Chocolate Cordillera</b> · Compañía Nacional de Chocolates<br>Ventas en Caucasia y zona Distrileco: Sofía · 312 680 6388</div>
+  <div>App hecha por <b>Vibras Positivas HM</b> · Harold Marín<br><span id="refFoot"></span></div>
+</div></footer>
+
+
+<div class="fab"><a id="fabWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp Sofía"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></a></div>
+
+<div class="ov" id="ov" onclick="if(event.target===this)closeOv()"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ====== CONFIGURACIÓN ====== */
+const CFG={
+  vendedora:'Sofía',
+  waVendedora:'573126806388',       // Sofía
+  codigoDefecto:'VPHM-HAROLD',      // código de referido de Harold
+  ciudad:'Caucasia'
+};
+/* Videos de Sofía: pon los archivos en la carpeta video/ y agrégalos aquí.
+   Ej: {src:'video/coberturas.mp4', titulo:'Bañando una torta'}  ó  {youtube:'ID', titulo:'...'} */
+const VIDEOS=[];
+
+/* ====== CÓDIGO DE REFERIDO ====== */
+let REF=CFG.codigoDefecto;
+try{const u=new URLSearchParams(location.search).get('ref');if(u){REF=u.toUpperCase().replace(/[^A-Z0-9-]/g,'').slice(0,24)||REF;localStorage.setItem('cord_ref',REF)}else{REF=localStorage.getItem('cord_ref')||REF}}catch(e){}
+
+/* ====== CATÁLOGO (del brochure Cordillera) ====== */
+const LINES=[
+ {id:'semi',n:'Semielaborados',img:'img/cacao-mesa.jpg',d:'Cocoas, licor y manteca de cacao: la base para dar sabor, color y aroma a chocolate.'},
+ {id:'reales',n:'Coberturas reales',img:'img/torta.jpg',d:'Chocolate real con sólidos de cacao. Para bombonería fina, ganaches, rellenos y postres. Requieren atemperado.'},
+ {id:'sf',n:'Sugar free',img:'img/sugarfree.jpg',d:'Coberturas reales sin azúcar añadida, endulzadas con stevia.'},
+ {id:'suc',n:'Coberturas sucedáneas',img:'img/sucedaneas.jpg',d:'Sabor a chocolate, fáciles de usar: se funden fácil, dan brillo y no necesitan atemperado.'},
+ {id:'top',n:'Toppings e inclusiones',img:'img/mani-grageas.jpg',d:'Barras, chunks, chips, perlas, grageas, maní y crumble para decorar y dar textura.'},
+ {id:'listos',n:'Listos para usar',img:'img/listos.jpg',d:'Chocubiertas, crema de avellana, cobertura para helados y mezcla chantilly. Abrir y usar.'}
+];
+const P=[
+ {id:'cocoa-natural-10',l:'semi',n:'Cocoa natural 10–12%',d:'Cacao pulverizado con 10–12% de manteca de cacao. Sabor amargo marcado y aroma del grano. Sin trazas de azúcar.',b:['Da sabor, color y aroma a chocolate','Presentación industrial más económica','Fácil manejo y dosificación'],a:['Pastelería','Repostería','Panadería','Bebidas'],pr:[['Saco 24 kg','1030868']]},
+ {id:'cocoa-natural-14',l:'semi',n:'Cocoa natural 14–16%',d:'Cacao pulverizado con 14–16% de manteca de cacao. Sabor amargo marcado y aroma del grano.',b:['Empaque resellable','Versátil en muchos productos','Fácil manejo y dosificación'],a:['Pastelería','Repostería','Panadería','Bebidas'],pr:[['Bolsa 1 kg','1049870'],['Saco 24 kg','1030870']]},
+ {id:'cocoa-alcalina-10',l:'semi',n:'Cocoa alcalina 10–12%',d:'Cacao alcalinizado. Con menos producto que la natural logras buen color y sabor a chocolate.',b:['Ideal para bebidas, malteadas, frappés y salsas','pH alcalino y muy buena solubilidad','Color más oscuro que la natural'],a:['Pastelería','Repostería','Panadería','Bebidas'],pr:[['Saco 24 kg','1030869']]},
+ {id:'cocoa-alcalina-22',l:'semi',n:'Cocoa alcalina 22–24%',d:'Cacao alcalinizado con 22–24% de manteca de cacao. Ideal para productos lácteos.',b:['Bebidas de chocolate, malteadas y salsas','Sabor y color intenso','Muy buena solubilidad'],a:['Pastelería','Repostería','Panadería','Bebidas'],pr:[['Bolsa 1 kg','1078635'],['Saco 24 kg','1078614']]},
+ {id:'licor-amargo',l:'semi',n:'Licor de chocolate amargo',d:'Cobertura de chocolate 100% cacao.',b:['Con crema de leche para ganache','Con azúcar o glucosa para cubrir galletas y donuts','Para bebidas amargas sin azúcar'],a:['Pastelería','Repostería','Panadería','Bebidas'],pr:[['Caja 20 kg','1018434']]},
+ {id:'manteca-cacao',l:'semi',n:'Manteca de cacao',d:'Da texturas semiblandas y fluidez a las coberturas. También se usa en farmacéutica y cosmética.',b:['Mejores acabados en bombonería','Resalta sabor en sucedáneas','Mejora el sabor en boca'],a:['Pastelería','Repostería','Panadería','Bebidas'],pr:[['Bloque 700 g','1082514'],['Bloque 5 kg','1054630']]},
+
+ {id:'amargo-70',l:'reales',n:'Origen Colombia amargo 70%',d:'Chocolate selecto e intenso, con notas de nueces tostadas, frutos rojos, vainilla y flores.',b:['Fluidez 4/5','Fundir 50 °C · cristalizar 29 °C · trabajo 31 °C'],a:['Bombonería y tabletas','Ganaches','Rellenos','Postres'],pr:[['Depositados doypack 500 g','1068011'],['Depositados doypack 3,5 kg','1082303']]},
+ {id:'amargo-65',l:'reales',n:'Origen Colombia amargo 65%',d:'Sabor balanceado: aromas florales y frutales con notas amargas sutiles.',b:['Fluidez 4/5','Chocolate de origen Colombia'],a:['Bombonería y tabletas','Ganaches','Rellenos','Postres'],pr:[['Depositados doypack 1 kg','1041789']]},
+ {id:'semiamargo-53',l:'reales',n:'Origen Colombia semiamargo 53%',d:'Matices de vainilla y baya con notas de canela, avellanas y café.',b:['Fluidez 4/5','Chocolate de origen Colombia'],a:['Bombonería y tabletas','Ganaches','Rellenos','Postres'],pr:[['Depositados doypack 1 kg','1041788'],['Depositados doypack 3,5 kg','1082312']]},
+ {id:'semiamargo-43',l:'reales',n:'Cobertura semiamargo 43%',d:'Chocolate real con 43% de sólidos de cacao, balance entre amargo y dulce.',b:['Fluidez 4/5','Presentación granel para alto consumo'],a:['Chocolatería','Postres fríos','Pastelería'],pr:[['Depositados doypack 1 kg','1048887'],['Bloque 5 kg','1049834'],['Depositados granel 20 kg','1010975']]},
+ {id:'leche-37',l:'reales',n:'Cobertura con leche 37%',d:'Chocolate real de leche, blend de origen latino, con notas de alta cremosidad.',b:['Fluidez 5/5','Ideal para figuras de chocolate'],a:['Bombonería y tabletas','Figuras','Postres fríos','Pastelería'],pr:[['Bloque 5 kg','1049832'],['Depositados granel 20 kg','1010976']]},
+ {id:'blanco-37',l:'reales',n:'Cobertura blanco 37%',d:'Chocolate blanco real, cremoso, con notas de caramelo, vainilla y leche.',b:['Fluidez 4/5','Fundir 45 °C · cristalizar 24 °C · trabajo 32 °C'],a:['Pastelería','Chocolatería'],pr:[['Bloque 5 kg','1049835']]},
+ {id:'blanco-30',l:'reales',n:'Cobertura blanco 30%',d:'Chocolate blanco de alta cremosidad, notas de caramelo, vainilla y leche.',b:['Fluidez 4/5'],a:['Bombonería y tabletas','Ganaches','Rellenos','Postres'],pr:[['Depositados doypack 1 kg','1041799'],['Depositados plegadiza 5 kg','1041795']]},
+
+ {id:'semiamargo-55-sf',l:'sf',n:'Semiamargo 55% sugar free',d:'Matices de vainilla, baya, canela, avellanas y café. Sin azúcar añadida, endulzado con stevia.',b:['Fluidez 4/5','Ideal para clientes que cuidan el azúcar'],a:['Bombonería y tabletas','Ganaches','Rellenos','Postres'],pr:[['Depositados doypack 500 g','1082338']]},
+ {id:'blanco-30-sf',l:'sf',n:'Blanco 30% sugar free',d:'Chocolate blanco cremoso, sin azúcar añadida, endulzado con stevia.',b:['Fluidez 4/5'],a:['Bombonería y tabletas','Ganaches','Rellenos','Postres'],pr:[['Depositados doypack 500 g','1082309']]},
+
+ {id:'suc-semiamargo',l:'suc',n:'Cobertura sabor a chocolate semiamargo',d:'Ideal para bañar frutas, moldear figuras, bombonería, decoración y ganache.',b:['Horneable','Excelente brillo','No necesita atemperado'],a:['Repostería','Pastelería','Panadería'],pr:[['Depositados doypack 500 g','1068009'],['Depositados doypack 1 kg','1059178'],['Bloque 1 kg','1083031'],['Bloque 5 kg','1059034'],['Depositados granel 20 kg','1059877']]},
+ {id:'suc-dulce',l:'suc',n:'Cobertura sabor a chocolate dulce',d:'Textura sólida, sabor a chocolate dulce con notas lácteas.',b:['Horneable','Se funde con facilidad','No necesita atemperado'],a:['Repostería','Pastelería','Panadería'],pr:[['Depositados doypack 500 g','1068008'],['Depositados doypack 1 kg','1059176'],['Bloque 1 kg','1059175'],['Bloque 5 kg','1059035']]},
+ {id:'suc-blanco',l:'suc',n:'Cobertura sabor a chocolate blanco',d:'Sin cocoa, para un color blanco cremoso. Para bañar frutas, figuras y ganache blanco.',b:['Solidifica a temperatura ambiente','Excelente brillo','No necesita atemperado'],a:['Repostería','Pastelería','Panadería'],pr:[['Depositados doypack 500 g','1068010'],['Depositados doypack 1 kg','1059257'],['Bloque 1 kg','1059200'],['Bloque 5 kg','1059036']]},
+
+ {id:'barra-43',l:'top',n:'Barra de chocolate real semiamargo 43%',d:'Barras de 8 × 1 cm para croissant, pasteles de hojaldre y decoración.',b:['Resistente al horneo','Complemento para bebidas de café'],a:['Pastelería','Repostería','Panadería','Bebidas'],pr:[['Caja 1 kg','1049872']]},
+ {id:'chunks-47',l:'top',n:'Chunks semiamargo 47%',d:'Cuadritos de chocolate real de 1 × 1 × 0,5 cm para panes, brownies, galletas y helados.',b:['Resistente al horneo','Textura en ganaches y cremas'],a:['Pastelería','Repostería','Panadería','Bebidas'],pr:[['Doypack 1 kg','1049869']]},
+ {id:'chips-semiamargo',l:'top',n:'Chips sabor a chocolate semiamargo',d:'Gotas para panes, brownies, galletas y topping de helados.',b:['Resistentes al horneo','Opción económica de topping','9.000 o 18.000 unidades por kilo'],a:['Chocolatería','Decoración','Pastelería','Panadería'],pr:[['Doypack 1 kg','1056399'],['Granel 18.000 · 12,5 kg','1003872'],['Granel 9.000 · 12,5 kg','1003875']]},
+ {id:'chips-blanco',l:'top',n:'Chips sabor a chocolate blanco',d:'Gotas blancas para tortas, donas, rollos, helados y bebidas. No aptas para hornear.',b:['Sabor intenso lácteo','Toleran frío sin perder color'],a:['Postres fríos','Decoración'],pr:[['Doypack 1 kg','1056397']]},
+ {id:'chips-tutti',l:'top',n:'Chips de colores tutti frutti',d:'Gotas amarillas, verdes y rojas para tortas, donas, helados, malteadas y yogures.',b:['No pierden color con la humedad','No aptas para hornear'],a:['Heladería','Repostería','Panadería'],pr:[['Doypack 500 g','1057721'],['Granel 5 kg','1059878']]},
+ {id:'perlas',l:'top',n:'Perlas de chocolate crocante',d:'Arroz soplado recubierto de chocolate dulce. Crocante y brillante.',b:['Se pueden pintar con polvos nacarados','No aptas para hornear'],a:['Heladería','Repostería','Panadería'],pr:[['Doypack 500 g','1057720']]},
+ {id:'grageas',l:'top',n:'Grageas de chocolate confitadas',d:'Grageas de chocolate cubiertas de azúcar de colores, para brownies, galletas y tortas.',b:['Color y brillo atractivo','Textura crocante'],a:['Heladería','Repostería','Panadería'],pr:[['Doypack 500 g','1057724']]},
+ {id:'mani',l:'top',n:'Maní tostado 3 mm',d:'Maní sin sal, tostado y triturado. Para granolas, galletas, tortas y helados.',b:['Resistente al horneo','Empaque resellable'],a:['Heladería','Repostería','Panadería'],pr:[['Doypack 800 g','1060216']]},
+ {id:'crumble',l:'top',n:'Crumble con chocolate',d:'Trozos de galleta crocante sabor chocolate y vainilla. Base de postres o topping.',b:['Se puede hornear','Sabor dulce e indulgente'],a:['Panadería','Pastelería','Bebidas','Heladería'],pr:[['Doypack 300 g','1077324']]},
+
+ {id:'chocubierta-semi',l:'listos',n:'Chocubierta sabor a chocolate semiamargo',d:'Semiblanda para bañar tortas, fuentes de chocolate y máquinas cubridoras. Relleno horneable.',b:['Horneable','Envase reutilizable, apto microondas','Conserva textura semiblanda'],a:['Repostería','Pastelería','Panadería'],pr:[['Tarro 1 kg','1059198'],['Caneca 4 kg','1059258'],['Caneca 10 kg','1059832']]},
+ {id:'chocubierta-blanca',l:'listos',n:'Chocubierta sabor a chocolate blanco',d:'Semiblanda para tortas, fuentes, fresas y masmelos. Sabor lácteo pronunciado.',b:['Buena plasticidad','Versión más fluida disponible'],a:['Repostería','Pastelería','Panadería'],pr:[['Chocubierta blanca más fluida · caneca 4 kg','1059259'],['Chocubierta blanca · caneca 4 kg','1059197']]},
+ {id:'crema-avellana',l:'listos',n:'Crema de avellana',d:'Untable sabor chocolate y avellana. En frío o horneada; relleno de croissant y hojaldre.',b:['No se quema al hornear','Lista para usar'],a:['Repostería','Heladería','Panadería'],pr:[['Caneca 4,5 kg','1059829']]},
+ {id:'helados-lpu',l:'listos',n:'Cobertura para helados LPU',d:'Cobertura sucedánea sabor semiamargo especial para heladería. Seca rápido.',b:['No requiere agregar grasas','Cubre sin fracturas','Mayor rendimiento en 10 kg'],a:['Heladería'],pr:[['Can 10 kg','1059831']]},
+ {id:'chantilly',l:'listos',n:'Mezcla en polvo para crema chantilly',d:'Crema suave con sabor lácteo y avainillado, para cupcakes, tortas, milhojas y malteadas.',b:['Larga vida útil','Puede sustituir la crema de leche'],a:['Repostería','Heladería','Panadería'],pr:[['Bolsa 300 g','1068107'],['Bolsa 1 kg','1059174']]}
+];
+
+/* ====== ESTADO ====== */
+let cart={}; // key "id|idx" -> qty
+try{cart=JSON.parse(localStorage.getItem('cord_cart')||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem('cord_cart',JSON.stringify(cart))}catch(e){};count()};
+const count=()=>{document.getElementById('cc').textContent=Object.values(cart).reduce((a,b)=>a+b,0)};
+const $=s=>document.querySelector(s);
+const wa=(n,t)=>'https://wa.me/'+n+'?text='+encodeURIComponent(t);
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),1800)}
+
+/* ====== RENDER ====== */
+let cur='reales';
+function tabs(){
+  $('#tabs').innerHTML=LINES.map(l=>`<button class="tab ${l.id===cur?'on':''}" onclick="setLine('${l.id}')">${l.n}</button>`).join('');
+  const L=LINES.find(l=>l.id===cur);
+  const [a,...r]=L.n.split(' ');
+  $('#linehead').innerHTML=`<img src="${L.img}" alt="${L.n}" loading="lazy"><div class="t"><span class="eyebrow">Línea</span><h3>${a} <em>${r.join(' ')}</em></h3><p>${L.d}</p><p style="margin-top:14px;color:var(--gold2)">${P.filter(p=>p.l===cur).length} productos</p></div>`;
+  $('#grid').innerHTML=P.filter(p=>p.l===cur).map(p=>`<article class="card" onclick="openP('${p.id}')">
+    <div class="ph"><img src="img/p/${p.id}.jpg" alt="${p.n}" loading="lazy"></div>
+    <div class="bd"><span class="tag">${L.n}</span><h4>${p.n}</h4><p>${p.d}</p>
+    <div class="ft"><span>${p.pr.length} presentaci${p.pr.length>1?'ones':'ón'}</span><b>Pedir</b></div></div></article>`).join('');
+}
+function setLine(id){cur=id;tabs();}
+
+function openP(id){
+  const p=P.find(x=>x.id===id),L=LINES.find(l=>l.id===p.l);
+  $('#sheet').innerHTML=`<button class="x" onclick="closeOv()" aria-label="Cerrar">×</button>
+  <div class="pd"><div class="im"><img src="img/p/${p.id}.jpg" alt="${p.n}"></div>
+  <div><span class="tag">${L.n}</span><h3>${p.n}</h3><p>${p.d}</p><ul class="b">${p.b.map(x=>`<li>${x}</li>`).join('')}</ul>
+  <div class="chips">${p.a.map(x=>`<span>${x}</span>`).join('')}</div></div></div>
+  <div class="pres"><h5>Presentaciones</h5>${p.pr.map((r,i)=>{const k=p.id+'|'+i;return `<div class="prow"><div><b>${r[0]}</b><small>Cód. SAP ${r[1]}</small></div>
+  <div class="qty"><button onclick="chg('${k}',-1,'${p.id}')">−</button><b id="q_${p.id}_${i}">${cart[k]||0}</b><button onclick="chg('${k}',1,'${p.id}')">+</button></div></div>`}).join('')}
+  <div class="cta" style="margin-top:14px"><button class="btn gold" onclick="openCart()">Ver mi pedido</button>
+  <a class="btn wa" target="_blank" rel="noopener" href="${wa(CFG.waVendedora,`Hola ${CFG.vendedora}, quiero información del producto Cordillera: ${p.n}. ¿Qué precio y disponibilidad tienes?\nCódigo de referido: ${REF}`)}">Preguntar a Sofía</a></div>
+  <p class="note">El precio lo confirma Sofía por WhatsApp según presentación y cantidad.</p></div>`;
+  $('#ov').classList.add('on');
+}
+function chg(k,d,pid){
+  cart[k]=Math.max(0,(cart[k]||0)+d); if(!cart[k])delete cart[k]; save();
+  const [id,i]=k.split('|'); const e=document.getElementById('q_'+id+'_'+i); if(e)e.textContent=cart[k]||0;
+  if(d>0)toast('Agregado a tu pedido');
+}
+function items(){return Object.entries(cart).map(([k,q])=>{const [id,i]=k.split('|');const p=P.find(x=>x.id===id);return p?{k,q,p,r:p.pr[+i]}:null}).filter(Boolean)}
+let cust={};try{cust=JSON.parse(localStorage.getItem('cord_cust')||'{}')}catch(e){}
+function openCart(){
+  const it=items();
+  $('#sheet').innerHTML=`<button class="x" onclick="closeOv()" aria-label="Cerrar">×</button>
+  <h3 class="osw" style="font-size:28px;text-transform:uppercase;margin-bottom:12px">Mi pedido</h3>
+  ${it.length?it.map(x=>`<div class="prow"><div><b>${x.p.n}</b><small>${x.r[0]} · Cód. ${x.r[1]}</small></div>
+   <div class="qty"><button onclick="chg('${x.k}',-1);openCart()">−</button><b>${x.q}</b><button onclick="chg('${x.k}',1);openCart()">+</button></div></div>`).join(''):'<p class="empty">Aún no has agregado productos. Escoge una línea y toca un producto.</p>'}
+  <div class="pres"><h5>Tus datos</h5>
+   <div class="field"><label for="fn">Nombre</label><input id="fn" value="${cust.n||''}" placeholder="Tu nombre"></div>
+   <div class="field"><label for="fb">Negocio (opcional)</label><input id="fb" value="${cust.b||''}" placeholder="Panadería, heladería, repostería…"></div>
+   <div class="field"><label for="fm">Municipio</label><input id="fm" value="${cust.m||CFG.ciudad}" placeholder="Caucasia"></div>
+   <div class="field"><label for="fo">Nota (opcional)</label><textarea id="fo" rows="2" placeholder="Dirección, horario de entrega…">${cust.o||''}</textarea></div>
+   <div class="field"><label for="fr">Código de referido</label><input id="fr" value="${REF}" readonly></div>
+   <div class="cta"><button class="btn wa" onclick="send()" ${it.length?'':'disabled style="opacity:.5"'}>Enviar pedido a Sofía por WhatsApp</button>
+   ${it.length?'<button class="btn ghost" style="color:var(--ink);border-color:var(--line)" onclick="cart={};save();openCart()">Vaciar</button>':''}</div>
+   <p class="note">Sofía te responde con precio, disponibilidad y día de entrega. Cubrimos Caucasia, Bajo Cauca, Córdoba, Nordeste, Urabá y Sucre.</p></div>`;
+  $('#ov').classList.add('on');
+}
+function msg(){
+  const it=items(); const n=$('#fn').value.trim(),b=$('#fb').value.trim(),m=$('#fm').value.trim(),o=$('#fo').value.trim();
+  cust={n,b,m,o};try{localStorage.setItem('cord_cust',JSON.stringify(cust))}catch(e){}
+  const now=new Date().toLocaleString('es-CO',{timeZone:'America/Bogota',dateStyle:'short',timeStyle:'short'});
+  return `Hola ${CFG.vendedora}, quiero hacer este pedido de chocolate Cordillera:\n\n`+
+   it.map(x=>`• ${x.q} × ${x.p.n} — ${x.r[0]} (Cód. ${x.r[1]})`).join('\n')+
+   `\n\nNombre: ${n||'-'}${b?'\nNegocio: '+b:''}\nMunicipio: ${m||'-'}${o?'\nNota: '+o:''}\n\nCódigo de referido: ${REF}\nPedido desde la app Cordillera · ${now}`;
+}
+function send(){
+  if(!$('#fn').value.trim()){$('#fn').focus();toast('Escribe tu nombre');return}
+  const t=msg();
+  window.open(wa(CFG.waVendedora,t),'_blank');
+  try{const h=JSON.parse(localStorage.getItem('cord_hist')||'[]');h.push({t:Date.now(),ref:REF,txt:t});localStorage.setItem('cord_hist',JSON.stringify(h.slice(-30)))}catch(e){}
+  $('#sheet').insertAdjacentHTML('beforeend',`<div class="pres"><p><b>¡Listo!</b> Se abrió WhatsApp con tu pedido para Sofía. Si no se abrió, <a href="${wa(CFG.waVendedora,t)}" target="_blank" rel="noopener">toca aquí</a>.</p></div>`);
+}
+function closeOv(){$('#ov').classList.remove('on')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeOv()});
+
+/* ====== VIDEOS / HISTORIAS ====== */
+function reel(){
+  const R=$('#reel');
+  const stories=[
+    {t:'Coberturas reales',imgs:['torta','trufas','postre']},
+    {t:'Toppings que venden',imgs:['galletas','toppings','mani-grageas']},
+    {t:'Del cacao a tu horno',imgs:['cacaotero','mazorcas','granos','pastelero']}
+  ];
+  let h=VIDEOS.map(v=>`<div class="vid">${v.youtube?`<iframe src="https://www.youtube.com/embed/${v.youtube}" allowfullscreen loading="lazy" title="${v.titulo}"></iframe>`:`<video src="${v.src}" controls playsinline preload="metadata"></video>`}<div class="cap" style="pointer-events:none"><b>${v.titulo||''}</b></div></div>`).join('');
+  h+=stories.slice(0,Math.max(0,3-VIDEOS.length)+ (VIDEOS.length?0:0)).map((s,j)=>`<div class="vid" data-s="${j}"><div class="bar">${s.imgs.map(()=>'<i><u></u></i>').join('')}</div><div class="story">${s.imgs.map((m,i)=>`<img src="img/${m}.jpg" alt="${s.t}" loading="lazy" class="${i?'':'on'}">`).join('')}</div><div class="cap"><b>${s.t}</b><br><span style="font-size:13px;opacity:.85">Pídelo con Sofía</span></div></div>`).join('');
+  R.innerHTML=h;
+  R.querySelectorAll('.vid[data-s]').forEach((v,j)=>{
+    const ims=v.querySelectorAll('.story img'),bars=v.querySelectorAll('.bar u');let i=0;
+    const step=()=>{ims.forEach((m,k)=>m.classList.toggle('on',k===i));bars.forEach((b,k)=>{b.style.transition='none';b.style.width=k<i?'100%':'0';});
+      requestAnimationFrame(()=>{bars[i].style.transition='width 4s linear';bars[i].style.width='100%'});i=(i+1)%ims.length};
+    setTimeout(()=>{step();setInterval(step,4000)},j*700);
+  });
+}
+
+/* ====== INICIO ====== */
+(function(){
+  const t=`Hola ${CFG.vendedora}, vi el portafolio de chocolate Cordillera y quiero información.\nCódigo de referido: ${REF}`;
+  ['heroWa','sellerWa','fabWa'].forEach(id=>document.getElementById(id).href=wa(CFG.waVendedora,t));
+  $('#refFoot').textContent='Código de referido: '+REF;
+  const sl=[...document.querySelectorAll('#slides img')];let s=0;
+  setInterval(()=>{sl[s].classList.remove('on');s=(s+1)%sl.length;sl[s].classList.add('on')},5000);
+  tabs();reel();count();
+  if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+})();
+</script>
+</body>
+</html>
